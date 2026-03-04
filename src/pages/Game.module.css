@@ -1,0 +1,184 @@
+.container {
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.backButton {
+    background: none;
+    border: none;
+    color: #afafaf;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.2s;
+}
+
+.backButton:hover {
+    color: #4b4b4b;
+}
+
+.progressBarContainer {
+    flex: 1;
+    height: 16px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progressBar {
+    height: 100%;
+    background: linear-gradient(90deg, #58cc02, #78da20);
+    border-radius: 10px;
+    transition: width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.livesContainer {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.heart {
+    color: #ff4b4b;
+    font-size: 1.5rem;
+    filter: drop-shadow(0 2px 0 #d33131);
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.characterContainer {
+    margin-bottom: 3rem;
+    transform: scale(1.2);
+}
+
+/* Feedback Bar Styles */
+.feedbackBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.feedbackBarCorrect {
+    background-color: #d7ffb8;
+    color: #58a700;
+}
+
+.feedbackBarIncorrect {
+    background-color: #ffdfe0;
+    color: #ea2b2b;
+}
+
+.feedbackContent {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.feedbackInfo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.feedbackIcon {
+    font-size: 3rem;
+    background: white;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.feedbackTitle {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 0.25rem;
+}
+
+.feedbackText {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.continueButton {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: filter 0.2s, transform 0.1s;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btnCorrect {
+    background-color: #58cc02;
+    color: white;
+    box-shadow: 0 4px 0 #46a302;
+}
+
+.btnIncorrect {
+    background-color: #ff4b4b;
+    color: white;
+    box-shadow: 0 4px 0 #d33131;
+}
+
+.continueButton:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Result Cards */
+.finishedCard,
+.gameOverCard {
+    background: white;
+    padding: 4rem;
+    border-radius: 24px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.finishedCard h2,
+.gameOverCard h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.finalScore {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #afafaf;
+}
